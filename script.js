@@ -3,8 +3,8 @@
 // ================================
 
 const profile = {
-  name: "yourname",
-  username: "@yourname",
+  name: "prey",
+  username: "@p",
   bio: "welcome to my little corner of the internet ♡",
   songTitle: "your song",
   songArtist: "your artist",
