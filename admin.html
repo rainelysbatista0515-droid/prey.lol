@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bio Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="topbar">
+      <div><span>CONTROL PANEL</span><h1>Customize your page</h1></div>
+      <div class="actions"><a href="index.html" target="_blank">View page ↗</a><button id="logout">Log out</button></div>
+    </header>
+
+    <section id="login" class="panel login">
+      <h2>Welcome back</h2><p>Sign in with the account you created in Supabase.</p>
+      <form id="loginForm">
+        <label>Email<input id="email" type="email" required></label>
+        <label>Password<input id="password" type="password" required></label>
+        <button>Sign in</button><div id="loginMsg" class="msg"></div>
+      </form>
+    </section>
+
+    <section id="dash" hidden>
+      <div class="grid">
+        <form id="profileForm" class="panel wide">
+          <div class="head"><div><h2>Profile</h2><p>Update the public card and landing-page handle.</p></div><button>Save</button></div>
+          <div class="two"><label>Display name<input id="name"></label><label>Username<input id="username"></label></div>
+          <label>Bio<textarea id="bio" rows="4"></textarea></label>
+          <div class="two"><label>Avatar URL<input id="avatar_url"></label><label>Background URL<input id="background_url"></label></div>
+          <div class="two"><label>Accent<input id="accent" type="color"></label><label>Accent 2<input id="accent2" type="color"></label></div>
+          <label class="check"><input id="show_status" type="checkbox"> Show online status</label>
+          <div id="profileMsg" class="msg"></div>
+        </form>
+
+        <form id="musicForm" class="panel">
+          <div class="head"><div><h2>Profile audio</h2><p>Use a direct MP3/OGG/WAV URL.</p></div><button>Save</button></div>
+          <label>Song title<input id="song_title"></label><label>Artist<input id="song_artist"></label>
+          <label>Audio URL<input id="music_url"></label><label class="check"><input id="music_enabled" type="checkbox"> Enable music player</label>
+          <div id="musicMsg" class="msg"></div>
+        </form>
+
+        <section class="panel">
+          <div class="head"><div><h2>Links</h2><p>Discord, Roblox, socials, and more.</p></div><button type="button" id="addLink">+ Add</button></div>
+          <div id="linksEditor"></div><button type="button" id="saveLinks">Save links</button><div id="linksMsg" class="msg"></div>
+        </section>
+
+        <section class="panel">
+          <div class="head"><div><h2>Badges</h2><p>Small labels shown on the profile.</p></div><button type="button" id="addBadge">+ Add</button></div>
+          <div id="badgesEditor"></div><button type="button" id="saveBadges">Save badges</button><div id="badgesMsg" class="msg"></div>
+        </section>
+
+        <section class="panel stat"><h2>Page views</h2><strong id="views">0</strong><p>Stored in your database.</p></section>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
