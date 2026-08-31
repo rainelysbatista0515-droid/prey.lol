@@ -1,67 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090711">
-  <meta name="description" content="My personal bio page">
-  <title>yourname — bio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#08070d">
+  <title>bio.link — modern bio pages</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg"></div>
+  <div class="aurora"></div>
   <div class="noise"></div>
 
-  <main class="page">
-    <section class="card" id="profileCard">
-      <div class="avatar-wrap">
-        <img id="avatar" class="avatar" src="assets/avatar.jpg" alt="Profile picture"
-             onerror="this.src='https://placehold.co/180x180/171321/e95bb5?text=♡'">
-        <span class="online-dot"></span>
-      </div>
+  <nav class="nav">
+    <a href="#" class="brand">bio<span>.link</span></a>
+    <div class="nav-actions">
+      <a href="admin.html">Sign in</a>
+      <a class="pill" href="admin.html">Get started</a>
+    </div>
+  </nav>
 
-      <h1 id="name">yourname</h1>
-      <p id="username">@yourname</p>
+  <main class="hero">
+    <div class="eyebrow">MODERN BIO PAGES</div>
+    <h1>Everything you are,<br><span>on one link.</span></h1>
+    <p class="lead">Custom backgrounds, profile audio, hover effects and unlimited links.<br>Claim your handle before somebody else does.</p>
 
-      <div class="badges">
-        <span>✦ creator</span>
-        <span>♡ online</span>
-      </div>
+    <div class="claim-box">
+      <span class="prefix">bio.link/</span>
+      <span id="claimHandle">yourname</span>
+      <a href="admin.html">Claim</a>
+    </div>
 
-      <p class="bio" id="bio">
-        welcome to my little corner of the internet ♡
-      </p>
+    <div class="label">LIVE PREVIEW</div>
 
-      <div class="links" id="links"></div>
-
-      <div class="music">
-        <button class="music-btn" id="musicBtn" aria-label="Play music">▶</button>
-        <div class="music-info">
-          <strong id="songTitle">your song</strong>
-          <span id="songArtist">your artist</span>
+    <section class="profile-card">
+      <div class="cover"></div>
+      <div class="profile-inner">
+        <div class="avatar-wrap">
+          <img id="avatar" src="https://placehold.co/180x180/171321/e95bb5?text=♡" alt="Profile picture">
+          <span id="statusDot" class="status-dot"></span>
         </div>
-        <div class="bars" id="bars" aria-hidden="true">
-          <i></i><i></i><i></i><i></i><i></i>
-        </div>
-      </div>
 
-      <div class="views">♡ <span id="views">000000</span> views</div>
+        <h2 id="name">yourname</h2>
+        <div id="username" class="username">@yourname</div>
+        <div id="badges" class="badges"></div>
+        <p id="bio" class="bio">welcome to my little corner of the internet ♡</p>
+
+        <div id="links" class="links"></div>
+
+        <div id="music" class="music hidden">
+          <button id="playBtn" class="play-btn" aria-label="Play">▶</button>
+          <div class="track">
+            <strong id="songTitle">your song</strong>
+            <span id="songArtist">your artist</span>
+          </div>
+          <div class="bars"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="views">♡ <span id="views">0</span> views</div>
+      </div>
     </section>
-
-    <footer>
-      <span>made with ♡</span>
-      <span>•</span>
-      <span id="year"></span>
-    </footer>
   </main>
 
-  <audio id="audio" preload="metadata" loop>
-    <source src="assets/music.mp3" type="audio/mpeg">
-  </audio>
-
-  <script src="script.js"></script>
+  <audio id="audio" loop preload="metadata"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

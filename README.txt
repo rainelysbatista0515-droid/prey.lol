@@ -1,38 +1,22 @@
-# My Bio Page
+COMGIRL-INSPIRED BIO PAGE V2
 
-A custom Discord/social bio page made with plain HTML, CSS and JavaScript.
+This is an original build inspired by the supplied screenshot's overall layout and mood:
+- dark pink/black gradient landing page
+- centered "modern bio pages" badge
+- large pink/purple hero heading
+- claim-your-handle box
+- Sign in / Get started navigation
+- glass profile preview
+- database-backed admin panel
 
-## Folder structure
+SETUP
+1. Create a Supabase project.
+2. Run supabase.sql in the Supabase SQL Editor.
+3. In Authentication -> Users, create your admin user.
+4. Copy your Project URL and public anon/publishable key into config.js.
+5. Upload all files to GitHub.
+6. Enable GitHub Pages.
+7. Visit /admin.html to edit your page.
 
-- index.html
-- style.css
-- script.js
-- assets/avatar.jpg
-- assets/music.mp3
-
-## Customize it
-
-Open `script.js` and edit the `profile` object.
-
-Change:
-- name
-- username
-- bio
-- song title/artist
-- social links
-
-Put your profile picture in `assets/avatar.jpg`.
-
-Put your music file in `assets/music.mp3`.
-
-## Publish with GitHub Pages
-
-1. Create a GitHub repository.
-2. Upload all files/folders from this project.
-3. Make sure `index.html` is in the top level.
-4. Open Settings → Pages.
-5. Choose "Deploy from a branch".
-6. Choose your `main` branch and `/ (root)`.
-7. Save.
-
-Your page will then be available at your GitHub Pages address.
+SECURITY
+Never place a Supabase service_role/secret key in config.js.
